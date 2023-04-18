@@ -49,10 +49,16 @@ const Wrapper = styled.div`
 const LeftContainer = styled.div`
   display: flex;
   padding-left: 1rem;
-  margin-top:10;
   align-items: center;
   flex: 1;
 `
+
+const FooterText = styled(Text)`
+  @media (max-width: 400px) {
+    margin-top: 12px;
+  }
+`;
+
 
 const RightContainer = styled.div`
   display: flex;
@@ -110,9 +116,9 @@ const Footer = () => {
   return (
     <Wrapper id="footer">
       <LeftContainer>
-        <Text color="draculaForeground">
+        <FooterText color="draculaForeground">
           Copyright &copy; {new Date().getFullYear()} QuestDB
-        </Text>
+        </FooterText>
       </LeftContainer>
       <RightContainer>
         <ConnectionStatus />
