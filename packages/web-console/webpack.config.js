@@ -44,6 +44,8 @@ if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = "development"
 }
 
+
+
 const basePlugins = [
   new CleanWebpackPlugin(),
   new HtmlWebpackPlugin({
@@ -154,6 +156,7 @@ module.exports = {
   plugins: [
     ...basePlugins,
     ...(config.isProduction ? prodPlugins : devPlugins),
+    
   ],
   stats: {
     all: false,
